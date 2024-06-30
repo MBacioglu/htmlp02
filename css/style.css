@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+:root {
+    --backgroundBox: rgba(100, 0, 0, 0.5);
+    --boxEdge: rgb(100, 0, 0);
+    --navColor: rgb(255, 255, 255);
+    --backgroundAdd: rgba(200, 30, 30, 0.6);
+}
+ 
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(75px, auto);
+    grid-template-areas:
+        "hd hd hd hd hd hd hd hd hd hd hd hd"
+        "nav nav main main main main main main main main asd asd"
+        "nav nav main main main main main main main main asd asd"
+        "nav nav main main main main main main main main ad ad"
+        "nav nav main main main main main main main main ad ad"
+        "ft ft ft ft ft ft ft ft ft ft ft ft"
+ 
+}
+ 
+header,
+nav,
+aside,
+main,
+footer {
+    background-color: var(--backgroundBox);
+    border: 1px solid var(--boxEdge);
+}
+ 
+header {
+    grid-area: hd;
+}
+ 
+nav {
+    grid-area: nav;
+    color: var(--navColor);
+}
+ 
+main {
+    grid-area: main;
+    column-count: 3;
+}
+ 
+aside {
+    grid-area: asd;
+}
+ 
+.advertising {
+    grid-area: ad;
+    background-color: var(--backgroundAdd);
+    border: 1px solid var(--boxEdge);
+}
+ 
+footer {
+    grid-area: ft;
+}
+ 
+ 
+@media screen and (min-width: 700px) and (max-width: 999px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+ 
+    :root {
+        --backgroundBox: rgba(100, 0, 0, 0.5);
+        --boxEdge: rgb(100, 0, 0);
+        --navColor: rgb(255, 255, 255);
+        --backgroundAdd: rgba(200, 30, 30, 0.6);
+    }
+ 
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(75px, auto);
+        grid-template-areas:
+            "hd hd hd hd hd hd hd hd"
+            "nav nav nav nav nav nav nav nav"
+            "asd asd main main main main main main"
+            "asd asd main main main main main main"
+            "asd asd main main main main main main"
+            "ad ad ft ft ft ft ft ft"
+
+ 
+    }
+ 
+    header,
+    nav,
+    aside,
+    main,
+    footer {
+        background-color: var(--backgroundBox);
+        border: 1px solid var(--boxEdge);
+    }
+ 
+    header {
+        grid-area: hd;
+    }
+ 
+    nav {
+        grid-area: nav;
+        color: var(--navColor);
+    }
+ 
+    main {
+        grid-area: main;
+        column-count: 2;
+    }
+ 
+    aside {
+        grid-area: asd;
+    }
+ 
+    .advertising {
+        grid-area: ad;
+        background-color: var(--backgroundAdd);
+        border: 1px solid var(--boxEdge);
+    }
+ 
+    footer {
+        grid-area: ft;
+    }
+ 
+}
+ 
+@media screen and (max-width: 699px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+ 
+    :root {
+        --backgroundBox: rgba(100, 0, 0, 0.5);
+        --boxEdge: rgb(100, 0, 0);
+        --navColor: rgb(255, 255, 255);
+        --backgroundAdd: rgba(200, 30, 30, 0.6);
+    }
+ 
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(75px, auto);
+        grid-template-areas:
+       "hd"
+       "nav"
+       "main"
+       "main"
+       "main"
+       "asd"
+       "ad"
+       "ft"
+
+ 
+    }
+ 
+    header,
+    nav,
+    aside,
+    main,
+    footer {
+        background-color: var(--backgroundBox);
+        border: 1px solid var(--boxEdge);
+    }
+ 
+    header {
+        grid-area: hd;
+    }
+ 
+    nav {
+        grid-area: nav;
+        color: var(--navColor);
+    }
+ 
+    main {
+        grid-area: main;
+        column-count: 1;
+    }
+ 
+    aside {
+        grid-area: asd;
+    }
+ 
+    .advertising {
+        grid-area: ad;
+        background-color: var(--backgroundAdd);
+        border: 1px solid var(--boxEdge);
+    }
+ 
+    footer {
+        grid-area: ft;
+    }
+}
